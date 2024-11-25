@@ -1,0 +1,14 @@
+{% extends 'work/base.html' %}
+
+{% block content %}
+    <h1>Cart</h1>
+    {% for item in items %}
+        <div class="d-inline-block p-3 border border-4 border-danger bg-dark ">
+            <a href="{% url 'work:cart_item' item.pk %}">
+                <img src="{{item.item.picture.url}}" alt="" width="200px">
+                <h3 class="text-white">{{item.item}}</h3>
+            </a>
+
+        </div>
+    {% endfor %}
+{% endblock %}

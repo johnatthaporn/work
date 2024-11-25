@@ -1,0 +1,12 @@
+{% extends 'work/base.html' %}
+
+{% block content %}
+    <h1>Choose</h1>
+    <div class="d-inline-block border border-5 display-5 bg-danger" style="padding: 200px;">
+        <a href="{% url 'work:sell' %}">Sell</a> 
+    </div>
+    <div class="d-inline-block border border-5 display-5 bg-success " style="padding: 200px;">
+        <a href="{% url 'work:buy' %}">Buy</a>
+    </div>
+    
+{% endblock %}

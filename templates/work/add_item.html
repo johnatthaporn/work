@@ -1,0 +1,21 @@
+{% extends 'work/base.html' %}
+
+{% block content %}
+
+    <h1>Add item</h1>
+    <form action="" method="post" enctype='multipart/form-data'>
+        {% csrf_token %}
+        <label for="">Name</label>
+        <input class="form-control" type="text" name="name" id="name">
+        
+        <p>
+            <label for="">picture</label>
+            <p></p>
+        <input type="file" name="picture" id="picture">
+        </p>
+        <label for="">Description</label>
+        <input class="form-control" type="text" name="description" id="description">
+
+        <input class="btn btn-success" type="submit" value="Add item">
+    </form>
+{% endblock %}
